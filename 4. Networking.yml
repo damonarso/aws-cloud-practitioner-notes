@@ -1,0 +1,29 @@
+Networking Components:
+- Virtual Private Cloud (VPC): isolated section of the AWS Cloud
+-- Increase Security
+-- Save Time
+-- Control Network Configuration
+- Subnets (Public and Private):
+-- Public Subnet: accessible from the internet. Web servers
+-- Private Subnet: not accessible from the internet. DB, transactional info
+- Internet Gateway: allows communication between instances in your VPC and the internet
+- Virtual Private Gateway: Enable VPN connections between your VPC and your on-premises network
+
+Connecting to AWS Cloud:
+- AWS Client VPN: Connect remote workers and on-premises networks to AWS. OpenVPN-based client.
+-- Benefits: Advanced authentication, remote access. Elastic and fully managed
+-- Use case: Remote workforce, secure access to AWS resources
+- Site-to-Site VPN: Connect your on-premises network to your AWS VPC
+-- Benefits: Secure and private session, accelerates applications. Highly available
+-- Use cases: Application migration, secure communication between remote locations
+- AWS PrivateLink: Securely access services hosted on AWS in a highly available and scalable manner, without using public IPs
+-- Benefits: Secure traffic and connect with simplifed management rules
+-- Use cases: connect clients in VPC to resources, other VPCs, and endpoints
+- AWS Direct Connect: Dedicated network connection from your premises to AWS
+-- Benefits: Reduce network costs, increase bandwidth throughput, and provide a more consistent network experience
+-- Use cases: High bandwidth applications, hybrid cloud, large-scale data transfer
+- AWS Transit Gateway: Connects VPCs and on-premises networks through a central hub
+- NAT Gateway: Enable instances in a private subnet to connect to the internet or other AWS services, but prevent the internet from initiating connections with those instances
+- API Gateway: Create, publish, maintain, monitor, and secure APIs at any scale
+
+Subnet

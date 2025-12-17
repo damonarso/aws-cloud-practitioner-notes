@@ -1,0 +1,56 @@
+EC2
+- General Purpose
+--  Balance. diverse workloads, like web services, code repositories, and when workload performance is uncertain.
+- Compute Optimized
+--  high-performance processors. gaming servers, high performance computing (HPC), machine learning, and scientific modeling.
+- Memory Optimized
+--  memory intensive. processing large datasets, data analytics, and databases
+- Storage Optimized
+--  high, sequential read and write access to very large data sets on local storage. NoSQL databases, data warehousing, Elasticsearch, and analytics workloads.
+- Accelerated Computing
+--  hardware accelerators, or co-processors, to perform functions such as floating-point number calculations, graphics processing, or data pattern matching more efficiently than software running on a general-purpose CPU. Machine learning, high-performance computing (HPC), seismic analysis, speech recognition, autonomous vehicles, and drug discovery.
+- Bare Metal
+--  access to the underlying hardware of an EC2 instance. workloads that require access to hardware features, such as Intel VT-x or AMD-V virtualization extensions, or applications that need to run in non-virtualized environments for licensing or support requirements.
+
+Configure: Storage, Type, AMI
+Pricing:
+- On-Demand
+--  pay for compute capacity by the hour or second (minimum of 60 seconds) with no long-term commitments. Applications with short-term, spiky, or unpredictable workloads that cannot be interrupted.
+- Reserved Instance
+--  provide a significant discount (up to 75%) compared to On-Demand instance pricing. steady-state or predictable usage applications, such as databases, or applications that require reserved capacity.
+- Spot Instance
+--  spare Amazon EC2 computing capacity at up to a 90% discount compared to On-Demand prices. applications that have flexible start and end times, or can be interrupted, such as big data analysis, containerized workloads, CI/CD, web servers, high-performance computing (HPC), and other test and development workloads.
+- Savings Plans
+--  flexible pricing model that offers low prices on EC2 and Fargate usage, in exchange for a commitment to a consistent amount of usage (measured in $/hour) for a 1- or 3-year term. applications with steady-state usage, such as web servers, databases, and development and test environments.
+- Dedicated Hosts
+--  physical servers with EC2 instance capacity fully dedicated to your use. regulatory requirements that may not support multi-tenant virtualization, or for licensing that does not support shared tenancy, such as Windows Server, SQL Server, and SUSE Linux Enterprise Server (subject to your license agreement).
+- Dedicated Instances
+--  run in a VPC on hardware that's dedicated to a single customer. workloads where you want to reduce costs by using your existing server-bound software licenses.
+
+Dedicated Hosts offer exclusive use of a server with full control, whereas Dedicated Instances provide isolation without server control.
+Cost Optimization
+- Savings Plans: Predictable workloads
+- Reserved Instances: Steady-state workloads Predictable usage
+- Capacity Reservations: Critical workloads with strict capacity requirements
+
+Scaling
+- Scale up (Vertical Scaling): Increase instance size
+- Scale out (Horizontal Scaling): Increase number of instances
+
+Elasticity: Automatically adjust capacity to maintain steady, predictable performance at the lowest possible cost.
+
+ELB
+- Efficient traffic distribution
+- Automatic scaling
+- Simplified management
+Routing Methods
+- Round Robin: Distributes traffic evenly across all registered instances in cyclical order.
+- Least Connections: Directs traffic to the instance with the fewest active connections.
+- IP Hash: Routes requests based on a hash of the client's IP address, ensuring that a client consistently connects to the same instance.
+- Least Response Time: Sends requests to the instance with the lowest response time, optimizing for performance.
+
+Message and Queueing: Decoupling
+- EventBridge: Ability to route events and store event and process when one service fails and wait for it to be available again.
+- SQS: can send, store, and receive messages at any scale, making sure messages are not lost and that other services don't need to be available for processing. In Amazon SQS, an application places messages into a queue, and a user or service retrieves the message, processes it, and then removes it from the queue.
+- SNS: publish-subscribe service that publishers use to send messages to subscribers through SNS topics
+

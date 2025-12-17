@@ -1,0 +1,24 @@
+Choosing Region
+- Compliance requirements: Data security and government compliance
+- Proximity: Reduce latency by choosing a nearby region
+- Features: Feature availability in different regions
+- Cost: Pricing differences between regions
+
+Desigining highly available applications
+- Deploying multi-region and multi-AZ resources
+-- High availability: operate continuously without failing
+-- Agility: Quickly adapt to changing requirements or market conditions
+-- Elasticity: Scale up or down on demand
+- Edge locations: provides quicker content access to users outside of standard regions
+
+Key Elements:
+- Regions: Geographical Area around the world that are made up of multiple data centers
+- AZ: Distinct locations within a region, consists of one or more data centers
+- Edge locations: sites around the world that cache content to deliver data, video, and applications with lower latency and higher transfer speeds. Used for CDN, cloudfront
+
+Infrastructure and automation
+- CloudFormation: 
+-- Service to model and setup AWS resources o spend less time managing and more time focusing on apps run in AWS
+-- Define infrastructure as code
+-- Create template of AWS resources needed
+-- Automated provision and configuration

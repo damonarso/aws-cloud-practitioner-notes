@@ -55,3 +55,11 @@ Differences:
 -- Security Groups: Fine-grained control of traffic for EC2 instances
 -- Network ACLs: Broad control of traffic in and out of subnets
 
+Edge Networking: Bring information storage and compute abilities closer to the devices that produce the information and users who consume it
+Route 53: Reliable and cost-effective DNS  to route end users to internet apps
+Cloudfront: Content Delivery Network (CDN) service that delivers content with faster loading times, cost savings, and reliability. Stores websites, videos, images.
+- Use cases: Video streaming services, Ecommerve website (product images), mobile app (map data and images)
+AWS Global Accelerator: Service that uses AWS global network to improve aplication availability, performance, and security. Uses intelligent traffic routing and fast failver if something goes wrong in the app locations
+- Use cases: Global gaming company, financial service application
+
+

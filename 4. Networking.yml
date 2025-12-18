@@ -26,4 +26,32 @@ Connecting to AWS Cloud:
 - NAT Gateway: Enable instances in a private subnet to connect to the internet or other AWS services, but prevent the internet from initiating connections with those instances
 - API Gateway: Create, publish, maintain, monitor, and secure APIs at any scale
 
-Subnet
+Subnet: Section of a VPC for grouping resources based on security or operational needs
+- Public subnets: accessible by public
+- Private subnets: resources that should be only accessible through private network, e.g. database
+
+Network traffic in a VPC: Packet sent -> Internet gateway -> enters VPC -> Network ACL -> Enters subnet
+
+Network ACL: Virtual firewall controlling traffic
+- Stateless packet filtering: Check packets cross the subnet each way, inbound and outbound
+
+Security Groups: Control inbound and outbound traffic at resource level
+- Stateful packet filtering: Remember previous decisions made for incoming packets
+
+Differences:
+- Scope:
+-- Security Groups: Instance level
+-- Network ACLs: Subnet level
+- State:
+-- Security Groups: Stateful
+-- Network ACLs: Stateless
+- Rule Types:
+-- Security Groups: Only allow type rules
+-- Network ACLs: Both allow and deny type rules
+- Return traffic:
+-- Security Groups: Automatically allowed if inbound is allowed
+-- Network ACLs: Must be impplicitly allowed in both directions
+- Uses:
+-- Security Groups: Fine-grained control of traffic for EC2 instances
+-- Network ACLs: Broad control of traffic in and out of subnets
+

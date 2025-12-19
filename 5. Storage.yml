@@ -1,0 +1,29 @@
+- Block Storage: Persistent, low-latency block-level storage that attached to EC2 instances like physical hard drives
+-- Amazon EC2 instance store: Unmanaged non-peristent, high-performance block storage directly attached to EC2 instances for temporary data
+--- Benefits: Automatically available, cost effective, high performance
+-- Amazon Elastic Block Store (EBS): persistent block storage volumes for EC2 instances. Various types for different workloads
+--- Use cases: database hosting, backup storage for apps, rapid deployment of development environments using volume snapshots
+--- Benefits: ability to detach and attach to instances, snapshots, can be modified to different type and sizes without downtime
+--- EBS Snapshots: Point-in-time backups of EBS volume. Can be used for disaster recovery, data migration, volume resizing, and for creating consistent backups of production workloads
+--- Flow:
+---- Initial snapshot: baseline and contains all the data blocks that were in use on the volume
+---- Subsequent inremental snapshots: Only blocks that have changed since last snapshot are captured and stored
+---- Snapshot consolidation and management: Each snapshot appears as a full point-in-time copy. When deleting a snapshot, only unique data to that snapshot is removed. Data referenced by other snapshots is preserved
+--- Amazon Data Lifecycle Manager: Automate creation, retention, deletion of EBS snapshots
+--- Steps:
+---- Create an EBS snapshots policy
+---- Select target resource type
+---- Exclude volumes
+---- Set Custom Schedules
+---- Apply Additional Actions
+
+- Object Storage: Data storage architecturethat manages data as objects in a flat address space
+-- Amazon Simple Storage Service (S3): Fully managed scalable object storage service for storing and retrieving any amount of data from anywhere
+
+- File Storage: Shared file systems accessible over networks, multiple users and apps can access the same data simultaneously
+-- Amazon Elastic File System (EFS): Fully managed, scalable NFS file system for use with AWS Cloud services and on-premises resources
+-- Amazon FSx: Fully managed file storage services for popular file syystems such as Windows, Lustre, and NetApp ONTAP
+
+- Additional Storage Services
+-- AWS Storage Gateway: Fully managed, hybrid-cloud storage service that provides on-premises access to virtually unlimited cloud storage.
+-- AWS Elastic Disaster Recovery: Fully managed service that streamlines the recovery of physical, virtual, and cloud based servers into AWS.

@@ -17,10 +17,23 @@
 ---- Set Custom Schedules
 ---- Apply Additional Actions
 
-- Object Storage: Data storage architecturethat manages data as objects in a flat address space
+- Object Storage: Data storage architecture that manages data as objects in a flat address space
 -- Amazon Simple Storage Service (S3): Fully managed scalable object storage service for storing and retrieving any amount of data from anywhere
+--- Elements: 
+---- S3 Objects: data, metadata, uid or key
+---- S3 bucket: container for storing objects
+--- Benefits: virtually unlimited storage, object lifecycle management, wide range of use cases (content distribution, hosting static website, deliver media files
+--- Security: bucket policies, identity-based policies, encryption (at rest and in transit 
+--- Classes:
+---- S3 Standard: general purpose, default
+---- S3 intelligent tiering: 3-tiers (frequent access, infrequent access, archive instant access), monitor and automatically moves data to most cost-effective storage tier
+---- S3 Standard-Infrequent Access
+---- S3 One Zone Infrequent Access: reduced cost compared to Standard IA
+---- Express One Zone: single AZ, for most frequently accessed data and latency sensitive apps. up to 10x faster and request costs up to 80% lower than S3 standard
+---- Glacier Instant retrieval: Archive rarely accessed data and requires milliseconds retrieval. save up to 68% compared to Standard IA with same latency and throughput performance 
 
-- File Storage: Shared file systems accessible over networks, multiple users and apps can access the same data simultaneously
+
+- File Storage: Shared file systtems accessible over networks, multiple users and apps can access the same data simultaneously
 -- Amazon Elastic File System (EFS): Fully managed, scalable NFS file system for use with AWS Cloud services and on-premises resources
 -- Amazon FSx: Fully managed file storage services for popular file syystems such as Windows, Lustre, and NetApp ONTAP
 
